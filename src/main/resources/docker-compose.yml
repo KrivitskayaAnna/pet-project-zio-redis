@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  redis:
+    image: redis:latest
+    command: [ "redis-server", "--enable-debug-command", "yes" ]
+    ports:
+      - "6379:6379"

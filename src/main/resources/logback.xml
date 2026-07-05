@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{dd/MM/YYYY HH:mm:ss.SSS} %highlight(%-5level) [%thread] %logger: %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <!-- Restrict logging for browser-level -->
+    <logger name="io.netty" level="WARN"/>
+    <logger name="org.asynchttpclient.netty" level="WARN"/>
+    <Logger name="org.apache.poi" level="OFF"/>
+
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>
