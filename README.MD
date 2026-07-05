@@ -3,7 +3,7 @@
 java 11 и выше
 
 ### Тестирование
-Для локального запуска поднять redis в docker командой docker compose up из директории
+Для локального запуска поднять redis в docker командой docker compose up из директории src/main/resources
 
 дебаггинг из консоли docker-сервиса:
 1) redis-cli
